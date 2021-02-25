@@ -15,13 +15,14 @@ const ingredients = [
 
 const list = document.querySelector('#ingredients');
 
-ingredients.forEach(
+const listItemArray = ingredients.map(
   item => {
     const li = document.createElement('li');
     li.textContent = item;
-    list.appendChild(li);
+    return li;
   }
 );
+list.append(...listItemArray);
 
 
 
